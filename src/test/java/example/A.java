@@ -25,7 +25,8 @@ public class A {
 		driver.get("file:///C:/Users/akshay/Desktop/Demo.html");
 		List<WebElement> elements = driver.findElements(By.tagName("a"));
 		System.out.println(elements);
-		
+		System.out.println("Hi");
+	
 
 	}
 }
