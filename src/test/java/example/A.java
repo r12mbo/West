@@ -1,11 +1,11 @@
 package example;
 
-import org.openqa.selenium.Alert;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class A {
 	static 
@@ -22,19 +22,9 @@ public class A {
 	}
 	public static void main(String[] args)   {
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://demo.guru99.com/test/simple_context_menu.html");	
-		WebElement element =driver.findElement(By.xpath("//button[text()='Double-Click Me To See Alert']"));
-		Actions action = new Actions(driver);
-		action.doubleClick(element).perform();
-		
-		Alert a = driver.switchTo().alert();
-		String s = a.getText();
-		System.out.println(s);
-		
-		a.accept();
-		
-		a.dismiss();
-		
+		driver.get("file:///C:/Users/akshay/Desktop/Demo.html");
+		List<WebElement> elements = driver.findElements(By.tagName("a"));
+		System.out.println(elements);
 		
 
 	}
